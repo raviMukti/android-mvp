@@ -4,15 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+    <EditText
+        android:id="@+id/txtInputName"
+        android:layout_width="252dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="128dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSaveFriend"
+        android:layout_width="251dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="92dp"
+        android:text="Add Friend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputPhone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFriendAdapter"
+        android:layout_width="326dp"
+        android:layout_height="185dp"
+        android:layout_marginBottom="40dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnSaveFriend"
+        app:layout_constraintHorizontal_bias="0.586"
+        app:layout_constraintStart_toStartOf="@+id/btnSaveFriend" />
+
+    <EditText
+        android:id="@+id/txtInputPhone"
+        android:layout_width="246dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/txtInputName"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/txtInputName"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
